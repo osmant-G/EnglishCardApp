@@ -105,7 +105,7 @@ function App() {
 
   const initialFrequencies = words.map(() => 1);
   const [frequencies, setFrequencies] = useState(initialFrequencies);
-  const [currentWord, setCurrentWord] = useState(words[0]);
+  const [currentWord, setCurrentWord] = useState(words.length > 0 ? words[0] : { word: '', meaning: '' });
 
   useEffect(() => {
     localStorage.setItem('words', JSON.stringify(words));
@@ -165,7 +165,7 @@ function App() {
   }, [words]);
 
   return (
-    <Router>
+    <Router basename="/EnglishCardApp">
       <Routes>
         <Route path="/word-list" element={<WordList words={words} addWord={addWord} deleteWord={deleteWord} />} />
         <Route path="/" element={
