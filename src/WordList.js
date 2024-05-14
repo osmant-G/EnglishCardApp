@@ -9,6 +9,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 const WordListContainer = styled.div`
@@ -22,6 +25,9 @@ const WordListContainer = styled.div`
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
 
 const WordItem = styled.div`
@@ -55,6 +61,10 @@ const DeleteButton = styled.button`
   &:hover {
     background-color: #ff4d4d;
   }
+  @media (max-width: 768px) {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
 `;
 
 const Button = styled.button`
@@ -70,6 +80,10 @@ const Button = styled.button`
   &:hover {
     background-color: #4dabf7;
   }
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
 `;
 
 const BackButtonContainer = styled.div`
@@ -77,6 +91,9 @@ const BackButtonContainer = styled.div`
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 `;
 
 const Form = styled.form`
@@ -85,7 +102,11 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
+
 
 const Input = styled.input`
   margin: 5px;
@@ -94,6 +115,9 @@ const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   width: calc(33.33% - 10px);
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const WordList = ({ words, addWord, deleteWord }) => {

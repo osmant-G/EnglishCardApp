@@ -11,8 +11,13 @@ const Container = styled.div`
   height: 100vh;
   background-color: #f0f4f8;
   position: relative;
-`;
+  padding: 20px;
+  box-sizing: border-box;
 
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+`;
 const Box = styled.div`
   width: 80%;
   height: 100px;
@@ -25,6 +30,10 @@ const Box = styled.div`
   font-size: 1.5em;
   color: #333333;
   border-radius: 8px;
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+    height: 80px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -33,6 +42,11 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    bottom: 10%;
+  }
 `;
 
 const Button = styled.button`
@@ -48,6 +62,11 @@ const Button = styled.button`
   transition: background-color 0.3s ease; /* ホバー時のアニメーション */
   &:hover {
     opacity: 0.9; /* ホバー時に少し暗くする */
+  }
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 50px;
+    font-size: 1em;
   }
 `;
 
@@ -67,6 +86,9 @@ const TopButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  @media (max-width: 768px) {
+    top: 5%;
+  }
 `;
 
 const TopButton = styled(NavLink)`
@@ -82,7 +104,12 @@ const TopButton = styled(NavLink)`
   &:hover {
     background-color: #4dabf7; /* ホバー時に色を変える */
   }
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
 `;
+
 
 function App() {
   const initialWords = [
