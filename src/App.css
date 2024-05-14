@@ -13,6 +13,14 @@
   }
 }
 
+@media screen and (orientation: portrait) {
+  /* 縦画面向けスタイル */
+  body {
+    background-color: #282c34;
+    color: white;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
