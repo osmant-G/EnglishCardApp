@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import WordList from './WordList';
 
@@ -165,7 +165,7 @@ function App() {
   }, [words]);
 
   return (
-    <Router basename="/EnglishCardApp">
+    <Router>
       <Routes>
         <Route path="/word-list" element={<WordList words={words} addWord={addWord} deleteWord={deleteWord} />} />
         <Route path="/" element={
